@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+from collections import deque
+
 """
 
 @author: ndjemou99
@@ -20,7 +23,9 @@ eleves["Souleyman"]=[]
 eleves["Zack"]=[]
 
 def search(name):
-   print(len(eleves.values()))
+   search_queue = deque()
+   search_queue+=eleves[name]
+   print (len(search_queue))
    return False
 
 if __name__== "__main__":
